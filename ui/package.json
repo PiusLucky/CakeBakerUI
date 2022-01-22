@@ -3,11 +3,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "install_client": "npm install",
+    "export": "npm run build && next export -o _static",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "install_client": "npm install",
-    "export": "npm run build && next export -o _static"
+    "lint": "next lint" 
   },
   "dependencies": {
     "@headlessui/react": "^1.4.3",

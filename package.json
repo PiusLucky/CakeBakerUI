@@ -38,6 +38,7 @@
     "slugify": "^1.6.5",
     "util": "^0.12.4"
   },
+  "engines" : { "node" : "16.x" },
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
