@@ -1,0 +1,64 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+envs:
+- key: NEXT_PUBLIC_BASE_URL
+  scope: RUN_AND_BUILD_TIME
+  value: https://cake-baker-8yhpu.ondigitalocean.app
+- key: NEXT_PUBLIC_PAYSTACK_KEY
+  scope: RUN_AND_BUILD_TIME
+  value: pk_test_ad7ee1773b323c21706aca881792b46fa7231f66
+- key: MongoURI
+  scope: RUN_AND_BUILD_TIME
+  value: mongodb+srv://CakeDB:Lucky&Pius&5@cluster0.stepe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+- key: GMAIL_APP_USER
+  scope: RUN_AND_BUILD_TIME
+  value: refem.applicants@gmail.com
+- key: GMAIL_APP_PASSWORD
+  scope: RUN_AND_BUILD_TIME
+  value: eqlzjosclgezeqbm
+- key: NODE_ENV
+  scope: RUN_AND_BUILD_TIME
+  value: production
+- key: JWT_SECRET
+  scope: RUN_AND_BUILD_TIME
+  value: Q^LT-P2d7_mDdc$uc3BZ?uPVh_gT*@c
+- key: PORT
+  scope: RUN_AND_BUILD_TIME
+  value: "443"
+- key: GMAIL_HOST
+  scope: RUN_AND_BUILD_TIME
+  value: smtp.gmail.com
+- key: GMAIL_PORT
+  scope: RUN_AND_BUILD_TIME
+  value: "465"
+- key: FRONTEND_LINK
+  scope: RUN_AND_BUILD_TIME
+  value: https://cake-baker-8yhpu.ondigitalocean.app
+- key: PAYSTACK_SECRET_KEY
+  scope: RUN_AND_BUILD_TIME
+  value: sk_test_74b7f87c8f7b5f42d3c26e341ecd97618a8fb5de
+name: cake-baker
+region: fra
+services:
+- build_command: npm run build
+  environment_slug: node-js
+  envs:
+  - key: NEXT_PUBLIC_BASE_URL
+    scope: RUN_AND_BUILD_TIME
+    value: https://cake-baker-api-zze59.ondigitalocean.app
+  - key: NEXT_PUBLIC_PAYSTACK_KEY
+    scope: RUN_AND_BUILD_TIME
+    value: pk_test_ad7ee1773b323c21706aca881792b46fa7231f66
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: PiusLucky/CakeBakerUI
+  http_port: 3000
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: cake-baker
+  routes:
+  - path: /
+  run_command: npm start
+  source_dir: /
