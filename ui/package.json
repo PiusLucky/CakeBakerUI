@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "install_client": "npm install",
+    "install_client": "npm install --include=dev",
     "export": "npm run build && next export -o _static"
   },
   "dependencies": {
