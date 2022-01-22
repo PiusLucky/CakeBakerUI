@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd ui && npm run install && npm run export",
+    "install_ui": "cd ui && npm run install_client",
+    "build": "cd ui && npm run export",
     "start": "node index.js"
   },
   "keywords": [],
