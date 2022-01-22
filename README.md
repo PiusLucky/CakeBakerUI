@@ -1,5 +1,5 @@
 # CakeBakerAPI
-DEMO: API for the CakeBaker App
+DEMO: CakeBaker App
 
 # View 1
 ![dash1](https://user-images.githubusercontent.com/32282934/150640092-9bf74876-e4e6-4a8f-ac1f-399d1dba296a.png)
