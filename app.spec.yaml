@@ -46,7 +46,7 @@ services:
   envs:
   - key: NEXT_PUBLIC_BASE_URL
     scope: RUN_AND_BUILD_TIME
-    value: https://cake-baker-api-zze59.ondigitalocean.app
+    value: https://cake-baker-8yhpu.ondigitalocean.app
   - key: NEXT_PUBLIC_PAYSTACK_KEY
     scope: RUN_AND_BUILD_TIME
     value: pk_test_ad7ee1773b323c21706aca881792b46fa7231f66
